@@ -1,0 +1,30 @@
+.imgBox {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 80px;
+  height: 110px;
+  margin: 4px 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  border-radius: 3px 4px;
+  
+}
+img {
+  cursor: pointer;
+  /* max-width: 80px; */
+  max-width: 5em;
+}
+
+.item:hover{
+  filter: brightness(90%);
+}
+
+.decBox {
+  margin-top: 7px;
+  display: inline-block;
+  height: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 15px;
+  font-family: "Nanum Gothic";
+}

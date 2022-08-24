@@ -1,8 +1,9 @@
 import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './home/home';
-import Genshin from './genshin/genshin';
-import Priconne from './priconne/priconne';
+import Priconne from './components/priconne/priconne';
+import Genshin from './components/genshin/genshin';
+import Home from './components/home/home';
+
 function App() {
   return (
     <div className='app'>

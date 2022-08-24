@@ -1,0 +1,9 @@
+.priconne, .genshin{
+  height:20vh;
+  width: 15vw;
+  margin: 1em;
+}
+
+.priconne:hover, .genshin:hover {
+  opacity: 0.75;
+}
