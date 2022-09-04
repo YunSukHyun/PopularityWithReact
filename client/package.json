@@ -1,5 +1,5 @@
 {
-  "name": "hbit-tracker",
+  "name": "popularity",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -6,7 +6,7 @@ const Home = (props) => {
   return (
     <div className={styles.img}>
       <Link to="/genshin">
-        <img className={styles.genshin} src="image/link_img/genshin.jpg" alt="genshin"/>
+        <img className={styles.genshin} src="image/link_img/genshin.png" alt="genshin"/>
       </Link>
       <Link to="/priconne">
         <img className={styles.priconne} src="image/link_img/priconne.png" alt="priconne"/>

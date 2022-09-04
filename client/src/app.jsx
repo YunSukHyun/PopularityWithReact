@@ -1,7 +1,7 @@
 import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Priconne from './components/priconne/priconne';
-import Genshin from './components/genshin/genshin';
+import Priconne from './components/game/priconne';
+import Genshin from './components/game/genshin';
 import Home from './components/home/home';
 
 function App() {
