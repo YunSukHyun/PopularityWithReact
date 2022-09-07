@@ -1,8 +1,18 @@
 import React from 'react';
 import styles from './character.module.css';
-const Character = ({char, game}) => {
+const Character = ({setGChars, setPChars, char, game}) => {
+  let pChars = [];
+  let gChars = [];
   const handleSelect = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
+    console.log(e.target.alt);
+    const selectedChar = e.target.alt;
+    if(game === "priconne"){
+      setPChars([...pChars, selectedChar]);
+    }
+    else if(game === "genshin"){
+      setGChars([...gChars, selectedChar]);
+    }
   }
   return (
     <div className={styles.imgBox}>
