@@ -1,18 +1,24 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './character.module.css';
-const Character = ({setGChars, setPChars, char, game}) => {
-  let pChars = [];
-  let gChars = [];
+import { gSelect } from './genshinSlice';
+import { pSelect } from './priconneSlice';
+
+const Character = ({char, game}) => {
+  const pCharSelected = useSelector(state => state.priconne.pCharSelected);
+  const gCharSelected = useSelector(state => state.genshin.gCharSelected);
+  const dispatch = useDispatch();
   const handleSelect = (e) => {
-    //e.preventDefault();
     console.log(e.target.alt);
     const selectedChar = e.target.alt;
-    if(game === "priconne"){
-      setPChars([...pChars, selectedChar]);
+    if(game === 'priconne'){
+      dispatch(pSelect(selectedChar));
     }
-    else if(game === "genshin"){
-      setGChars([...gChars, selectedChar]);
+    else if(game === 'genshin'){
+      dispatch(gSelect(selectedChar));
     }
+    console.log(pCharSelected);
+    console.log(gCharSelected);
   }
   return (
     <div className={styles.imgBox}>

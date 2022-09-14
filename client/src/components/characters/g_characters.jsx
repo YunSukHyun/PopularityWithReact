@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Character from '../character/character';
 import styles from './characters.module.css';
 import * as gLib from '../genshin_library';
-const GCharaters = ({setGChars, game}) => {
+const GCharacters = ({game}) => {
   const male = gLib.gender[0];
   const female = gLib.gender[1];
   const [charState, setCharState] = useState([true, true]);
@@ -30,14 +30,24 @@ const GCharaters = ({setGChars, game}) => {
       value={gender}/>))}
     <div className={styles.charPadding}>
       {charState[0] && <span>
-        {male.map(character => (<Character setGChars={setGChars} game={game} char={character} key={character}/>))}
+        {male.map(character => 
+          (<Character
+            game={game}
+            char={character}
+            key={character}/>
+          ))}
       </span>}
       {charState[1] && <span>
-        {female.map(character => (<Character setGChars={setGChars} game={game} char={character} key={character}/>))}
+        {female.map(character => 
+          (<Character
+            game={game}
+            char={character}
+            key={character}/>
+          ))}
       </span>}
     </div>
     </>
   );
 };
 
-export default GCharaters;
+export default GCharacters;

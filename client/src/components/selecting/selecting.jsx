@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import PCharacters from '../characters/p_characters';
 import styles from './selecting.module.css';
-import GCharaters from '../characters/g_charaters';
+import GCharacters from '../characters/g_characters';
 
 const Selecting = ({game}) => {
   const [pChars, setPChars] = useState([]);
   const [gChars, setGChars] = useState([]);
   const whatGame = (g) => {
     if(g === "priconne")
-      return <PCharacters setPChars={setPChars} game={g}/>
+      return <PCharacters game={g}/>
     else if(g === "genshin")
-      return <GCharaters setGChars={setGChars} game={g}/>
+      return <GCharacters game={g}/>
   }
   const visible = (g) => {
     if(g === "genshin")
@@ -22,6 +22,10 @@ const Selecting = ({game}) => {
   const showChars = () => {
     console.log(pChars);
     console.log(gChars);
+  }
+  const reset = () => {
+    setGChars([]);
+    setPChars([]);
   }
   return (
     <>
@@ -37,6 +41,7 @@ const Selecting = ({game}) => {
           <div className={styles.score8}>{visible(game)}</div>
         </div>
         <button onClick={showChars}>BTN</button>
+        <button onClick={reset}>Reset</button>
         <div className={styles.forFun}>
 
         </div>
