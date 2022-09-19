@@ -12,10 +12,14 @@ const priconneSlice = createSlice({
       state.pCharSelected.push(action.payload);
     },
     pUnSelect: (state, action) => {
-      state.pCharSelected.filter(user => user !== action.payload)
+      state.pCharSelected.filter(user => user !== action.payload);
+    },
+    pReset: (state) => {
+      state.pCharSelected = [];
+      
     }
   }
 })
 
-export const {pSelect, pUnselect} = priconneSlice.actions
+export const {pSelect, pUnselect, pReset} = priconneSlice.actions
 export default priconneSlice.reducer;

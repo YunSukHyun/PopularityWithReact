@@ -13,9 +13,12 @@ const genshinSlice = createSlice({
     },
     gUnselect: (state, action) => {
       state.gCharSelected.filter(user => user !== action.payload)
+    },
+    gReset: (state) => {
+      state.gCharSelected = [];
     }
   }
 })
 
-export const {gSelect, gUnselect} = genshinSlice.actions
+export const {gSelect, gUnselect, gReset} = genshinSlice.actions
 export default genshinSlice.reducer;
