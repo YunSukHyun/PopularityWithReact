@@ -12,7 +12,7 @@ const genshinSlice = createSlice({
       state.gCharSelected.push(action.payload);
     },
     gUnselect: (state, action) => {
-      state.gCharSelected.filter(user => user !== action.payload)
+      state.gCharSelected = state.gCharSelected.filter(user => user !== action.payload)
     },
     gReset: (state) => {
       state.gCharSelected = [];

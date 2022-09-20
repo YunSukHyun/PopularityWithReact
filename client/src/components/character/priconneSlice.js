@@ -11,8 +11,8 @@ const priconneSlice = createSlice({
     pSelect: (state, action) => {
       state.pCharSelected.push(action.payload);
     },
-    pUnSelect: (state, action) => {
-      state.pCharSelected.filter(user => user !== action.payload);
+    pUnselect: (state, action) => {
+      state.pCharSelected = state.pCharSelected.filter(user => user !== action.payload);
     },
     pReset: (state) => {
       state.pCharSelected = [];

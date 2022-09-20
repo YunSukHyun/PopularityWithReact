@@ -40,7 +40,9 @@ const Character = ({char, game}) => {
     }
     console.log(pCharSelected);
     console.log(gCharSelected);
+    // console.log(e.target.nextSibling.nextSibling);
   }
+
   return (
     <div className={styles.imgBox}>
       <img

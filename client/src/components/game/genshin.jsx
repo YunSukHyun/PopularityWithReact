@@ -1,4 +1,5 @@
 import React from 'react';
+import Selected from '../selected/selected';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import Selecting from '../selecting/selecting';
@@ -10,6 +11,8 @@ const Genshin = () => {
       <Header title={"Genshin Impact"}/>
         <div className={styles.container}>
           <Selecting game={"genshin"}/>
+          <Selected game={"genshin"}/>
+          
         </div>
       <Footer/>
     </section>

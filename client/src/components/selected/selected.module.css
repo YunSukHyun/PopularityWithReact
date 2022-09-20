@@ -1,0 +1,27 @@
+.selected {
+  flex-basis: 50%;
+  background-color: antiquewhite
+}
+
+.afterSelect{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+  color: brown;
+}
+
+.score10{
+  background-color: gold;
+}
+.score9{
+  background-color: silver;
+}
+.toServer img {
+  margin: 1em;
+  width: 15em;
+  height: 15em;
+}
+
+.toServer img:hover{
+  opacity: 0.8;
+}
