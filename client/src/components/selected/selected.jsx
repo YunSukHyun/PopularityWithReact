@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { pReset} from '../character/priconneSlice';
 import { gReset} from '../character/genshinSlice';
 import SelectedChar from '../selectedChar/selectedChar';
+import { Link } from 'react-router-dom';
+import Legend from '../legend/legend';
 const Selected = ({game}) => {
   const pCharSelected = useSelector(state => state.priconne.pCharSelected);
   const gCharSelected = useSelector(state => state.genshin.gCharSelected);
@@ -12,7 +14,7 @@ const Selected = ({game}) => {
     if(game === "genshin")
       return '';
     else{
-      return "3(score+8)";
+      return "";
     }
   }
   const showSelected = (rank) => {
@@ -64,25 +66,24 @@ const Selected = ({game}) => {
   return (
     <section className={styles.selected}>
       <h2 className={styles.afterSelect}>Selected</h2>
+      <Link to='/' className={styles.home}>Home</Link>
       <button onClick={showChars}>BTN</button>
       <button onClick={reset}>Reset</button>
       <div className={styles.toServer}>
-        <div className={styles.score10}>
-          1(score+10)
+        <div className={styles.score5}>
           {showSelected(1)}
         </div>
-        <div className={styles.score9}>
-          2(score+9)
+        <div className={styles.score3}>
           {showSelected(2)}
         </div>
-        <div className={styles.score8}>
+        <div className={styles.score1}>
           {visible()}
           {showSelected(3)}
         </div>
       </div>
-
       <div className={styles.forFun}>
       </div>
+      <Legend game={game}/>
     </section>
   )
 };

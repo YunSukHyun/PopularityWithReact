@@ -25,7 +25,7 @@ const PCharacters = ({game}) => {
   }
   return (
     <>
-    <span>분류: </span>
+    <span className={styles.classify}>Classify: </span>
     {pLib.starsBtn.map(star => (<input
       key={star}
       className={styles.button}

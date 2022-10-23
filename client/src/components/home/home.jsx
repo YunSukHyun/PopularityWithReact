@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./home.module.css";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div className={styles.img}>
       <Link to="/genshin">

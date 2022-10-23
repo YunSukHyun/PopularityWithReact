@@ -1,4 +1,4 @@
-export const genderBtn = ["All", "male", "female"];
+export const genderBtn = ["All", "Male", "Female"];
 const male = ['고로', '다이루크', '레이저', '베넷', '벤티', '소', '아야토', '아이테르',
               '알베도', '이토', '종려', '중운', '카즈하', '케이야', '타르탈리아', '타이나리',
             '토마', '행추', '헤이조'];

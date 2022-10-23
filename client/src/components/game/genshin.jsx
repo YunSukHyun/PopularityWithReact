@@ -9,7 +9,8 @@ const Genshin = () => {
   return (
     <section className={styles.main}>
       <Header title={"Genshin Impact"}/>
-        <div className={styles.container}>
+        <div
+          className={styles.gContainer}>
           <Selecting game={"genshin"}/>
           <Selected game={"genshin"}/>
           

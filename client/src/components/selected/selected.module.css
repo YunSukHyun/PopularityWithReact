@@ -1,6 +1,6 @@
 .selected {
   flex-basis: 50%;
-  background-color: antiquewhite
+  background-color: rgba(219, 215, 212, 0.7);
 }
 
 .afterSelect{
@@ -10,18 +10,30 @@
   color: brown;
 }
 
-.score10{
-  background-color: gold;
+.home {
+  font-size: 1.5em;
+  margin: 0.5em;
 }
-.score9{
-  background-color: silver;
+.home:hover{
+  color:dodgerblue;
 }
+.score5{
+  background-color: rgba(212, 175, 55, 0.8);
+}
+.score3{
+  background-color: rgba(192, 192, 192, 0.8);
+}
+.score1{
+  background-color: rgba(205, 127, 50, 0.8);
+}
+
 .toServer img {
   margin: 1em;
-  width: 15em;
-  height: 15em;
+  width: 14em;
+  height: 14em;
 }
 
 .toServer img:hover{
   opacity: 0.8;
 }
+

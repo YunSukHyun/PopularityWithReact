@@ -12,11 +12,19 @@ const Selecting = ({game}) => {
     else if(game === "genshin")
       return <GCharacters game={game}/>
   }
-
+  const selectNum = () => {
+    if(game === "priconne")
+      return "Select 6"
+    else if(game === "genshin")
+      return "Select 3"
+  }
   return (
     <section className={styles.unselected}>
       <h2 className={styles.beforeSelect}>UnSelected</h2>    
       {whatGame()}
+      <div className={styles.prompt}>
+        {selectNum()}
+      </div>
     </section>
   )
 };

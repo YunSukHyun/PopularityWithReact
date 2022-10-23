@@ -21,7 +21,7 @@ const GCharacters = ({game}) => {
   }
   return (
     <>
-    <span>분류: </span>
+    <span className={styles.classify}>Classify: </span>
     {gLib.genderBtn.map(gender => (<input
       key={gender}
       className={styles.button}

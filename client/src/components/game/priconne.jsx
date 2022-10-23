@@ -9,7 +9,7 @@ const Priconne = () => {
   return (
     <section className={styles.main}>
       <Header title={"Princess Connect Re:dive"}/>
-        <div className={styles.container}>
+        <div className={styles.pContainer}>
           <Selecting game={"priconne"}/>
           <Selected game={"priconne"}/>
         </div>
