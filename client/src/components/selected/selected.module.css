@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
 .selected {
   flex-basis: 50%;
   background-color: rgba(219, 215, 212, 0.7);
@@ -11,6 +12,7 @@
 }
 
 .home {
+  font-family: 'Domine', serif;
   font-size: 1.5em;
   margin: 0.5em;
 }

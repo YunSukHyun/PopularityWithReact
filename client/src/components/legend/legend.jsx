@@ -8,7 +8,7 @@ const Legend = ({game}) => {
           <ul className='legend-labels'>
             <li><span style={{background:'#d4af37'}}></span>5points</li>
             <li><span style={{background:'#c0c0c0'}}></span>3points</li>
-            {game === "priconne" ? <li><span style={{background:'#cd7f32'}}></span>1points</li> : ''}
+            {game === "priconne" && <li><span style={{background:'#cd7f32'}}></span>1points</li>}
           </ul>
         </div>
     </div>

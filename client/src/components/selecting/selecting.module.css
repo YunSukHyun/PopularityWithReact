@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
 .unselected {
   flex-basis: 50%;
   background-color:rgb(251, 228, 232, 0.8);
@@ -24,6 +25,8 @@
 
 .prompt{
   padding: 1em;
+  user-select: none;
+  font-family: 'Domine', serif;
   font-size: 3em;
   text-align: center;
 }

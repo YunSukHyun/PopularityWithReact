@@ -1,7 +1,11 @@
 .my-legend{
+  position: relative;
+  top: 1em;
+  left: 1em;
   border: 2px solid black;
+  display: flex;
   width: 10em;
-  height: 6em;
+  flex-direction: column;
 }
 .legend-title, .legend-scale{
   padding-left: 0.5em;
