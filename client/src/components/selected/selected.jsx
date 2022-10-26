@@ -69,6 +69,7 @@ const Selected = ({game}) => {
       <Link to='/' className={styles.home}>Home</Link>
       <button onClick={showChars}>BTN</button>
       <button onClick={reset}>Reset</button>
+      <button onClick={reset}>Submit</button>
       <div className={styles.toServer}>
         <div className={styles.score5}>
           {showSelected(1)}

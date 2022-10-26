@@ -40,16 +40,22 @@ const Character = ({char, game}) => {
     }
     console.log(pCharSelected);
     console.log(gCharSelected);
-    // console.log(e.target.nextSibling.nextSibling);
   }
 
   return (
     <div className={styles.imgBox}>
+      <div className={styles.tooltip}>
       <img
         src={`image\\${game}_img\\${char}.png`}
         className={styles.item}
         onClick={handleSelect}
         alt={`${char}`}/>
+        <img
+        className={styles.tooltipImg}
+        src={`image\\${game}_tooltip\\${char}.png`}
+        alt={`${char}`}
+        />
+      </div>
       <div className={styles.decBox}>{char}</div>
     </div>
   );
