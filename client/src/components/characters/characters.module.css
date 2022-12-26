@@ -14,7 +14,7 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.4s ease;
-  position: relative;
+  /* position: relative; */
 }
 .button {
   transition: all 0.3s ease;

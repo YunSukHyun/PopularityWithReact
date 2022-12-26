@@ -63,8 +63,11 @@ const Selected = ({game}) => {
     dispatch(pReset());
     dispatch(gReset());
   }
+  const handleMouseMove = (e) => {
+    console.log(e.clientX, e.clientY);
+  }
   return (
-    <section className={styles.selected}>
+    <section className={styles.selected}        onMouseMove={handleMouseMove}>
       <h2 className={styles.afterSelect}>Selected</h2>
       <Link to='/' className={styles.home}>Home</Link>
       <button onClick={showChars}>BTN</button>

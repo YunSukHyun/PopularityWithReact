@@ -10,10 +10,10 @@ const GCharacters = ({game}) => {
     e.preventDefault();
     const ClickedBtn = e.target.value;
     switch(ClickedBtn){
-      case "male": 
+      case "Male": 
         setCharState([true, false]);
         break;
-      case "female":
+      case "Female":
         setCharState([false, true]);
         break;
       default: setCharState([true, true, true]);

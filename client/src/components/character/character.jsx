@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './character.module.css';
 import { gSelect } from './genshinSlice';
@@ -41,16 +42,22 @@ const Character = ({char, game}) => {
     console.log(pCharSelected);
     console.log(gCharSelected);
   }
-
+  const [xy, setXY] = useState({x: 0, y:0});
+  const handleMouseMove = (e) => {
+    console.log(e.clientX, e.clientY);
+    setXY({x: e.clientX, y: e.clientY});
+  }
   return (
     <div className={styles.imgBox}>
-      <div className={styles.tooltip}>
+      <div className={styles.tooltip} onMouseMove={handleMouseMove}>
       <img
         src={`image\\${game}_img\\${char}.png`}
         className={styles.item}
+
         onClick={handleSelect}
         alt={`${char}`}/>
         <img
+        style={{top: `${xy.y + 20}px`, left: `${xy.x + 5}px`}}
         className={styles.tooltipImg}
         src={`image\\${game}_tooltip\\${char}.png`}
         alt={`${char}`}
