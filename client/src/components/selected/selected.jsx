@@ -6,6 +6,8 @@ import { gReset} from '../character/genshinSlice';
 import SelectedChar from '../selectedChar/selectedChar';
 import { Link } from 'react-router-dom';
 import Legend from '../legend/legend';
+
+
 const Selected = ({game}) => {
   const pCharSelected = useSelector(state => state.priconne.pCharSelected);
   const gCharSelected = useSelector(state => state.genshin.gCharSelected);
@@ -55,24 +57,19 @@ const Selected = ({game}) => {
       }
     }
   }
-  const showChars = () => {
-    console.log(pCharSelected);
-    console.log(gCharSelected);
-  }
+
   const reset = () => {
     dispatch(pReset());
     dispatch(gReset());
   }
-  const handleMouseMove = (e) => {
-    console.log(e.clientX, e.clientY);
-  }
+
   return (
-    <section className={styles.selected}        onMouseMove={handleMouseMove}>
+    <section className={styles.selected}>
       <h2 className={styles.afterSelect}>Selected</h2>
       <Link to='/' className={styles.home}>Home</Link>
-      <button onClick={showChars}>BTN</button>
       <button onClick={reset}>Reset</button>
-      <button onClick={reset}>Submit</button>
+
+
       <div className={styles.toServer}>
         <div className={styles.score5}>
           {showSelected(1)}
@@ -88,7 +85,9 @@ const Selected = ({game}) => {
       <div className={styles.forFun}>
       </div>
       <Legend game={game}/>
+      <button className={styles.submit}>submit</button>
     </section>
+    
   )
 };
 

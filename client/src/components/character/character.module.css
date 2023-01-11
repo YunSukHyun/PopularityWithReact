@@ -31,8 +31,6 @@
   display:none;
   border-radius: 5px;
   background:white; 
-  /* float:left; */
-  /* margin:0px 8px 8px 0; */
   position: absolute;
 }
 
@@ -41,12 +39,11 @@
 .tooltip:hover .tooltipImg {
   display:block;
   position:absolute;
-  z-index:1000;
+  z-index:10;
   width:auto;
   max-width:320px;
   min-height:128px;
-  /* margin-top:1px;
-  margin-left:32px; */
+  max-height: 500px;
   background-color: rgba(255, 255, 255, 0.7);
   animation: fadein 0.5s;
   -moz-animation: fadein 0.5s; /* Firefox */

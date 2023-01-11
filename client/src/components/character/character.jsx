@@ -44,7 +44,6 @@ const Character = ({char, game}) => {
   }
   const [xy, setXY] = useState({x: 0, y:0});
   const handleMouseMove = (e) => {
-    console.log(e.clientX, e.clientY);
     setXY({x: e.clientX, y: e.clientY});
   }
   return (
