@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import Character from '../character/character';
 import styles from './characters.module.css';
 import * as pLib from '../priconne_library';
+import { useSelector } from 'react-redux';
 const PCharacters = ({game}) => {
   const star1 = pLib.characters[0];
   const star2 = pLib.characters[1];
   const star3 = pLib.characters[2];
   const [charState, setCharState] = useState([true, true, true]);
+  const pCharSelected = useSelector(state => state.priconne.pCharSelected);
   const handleCharList = (e) => {
     e.preventDefault();
     const ClickedBtn = e.target.value;
@@ -34,7 +36,7 @@ const PCharacters = ({game}) => {
       value={star}/>))}
     <div className={styles.charPadding}>
       {charState[0] && <span>
-        {star1.map(character => 
+        {star1.map(character => pCharSelected.includes(character) ? '' :
           (<Character
             game={game}
             char={character}
@@ -42,7 +44,7 @@ const PCharacters = ({game}) => {
           ))}
       </span>}
       {charState[1] && <span>
-        {star2.map(character => 
+        {star2.map(character => pCharSelected.includes(character) ? '' :
           (<Character
             game={game}
             char={character}
@@ -50,7 +52,7 @@ const PCharacters = ({game}) => {
           ))}
       </span>}
       {charState[2] && <span>
-        {star3.map(character =>
+        {star3.map(character => pCharSelected.includes(character) ? '' :
           (<Character
             game={game}
             char={character}

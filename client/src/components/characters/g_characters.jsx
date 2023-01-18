@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import Character from '../character/character';
 import styles from './characters.module.css';
 import * as gLib from '../genshin_library';
+import { useSelector } from 'react-redux';
 const GCharacters = ({game}) => {
   const male = gLib.gender[0];
   const female = gLib.gender[1];
   const [charState, setCharState] = useState([true, true]);
+  const gCharSelected = useSelector(state => state.genshin.gCharSelected);
   const handleCharList = (e) => {
     e.preventDefault();
     const ClickedBtn = e.target.value;
@@ -30,7 +32,7 @@ const GCharacters = ({game}) => {
       value={gender}/>))}
     <div className={styles.charPadding}>
       {charState[0] && <span>
-        {male.map(character => 
+        {male.map(character => gCharSelected.includes(character) ? '' : 
           (<Character
             game={game}
             char={character}
@@ -38,7 +40,7 @@ const GCharacters = ({game}) => {
           ))}
       </span>}
       {charState[1] && <span>
-        {female.map(character => 
+        {female.map(character => gCharSelected.includes(character) ? '' :
           (<Character
             game={game}
             char={character}

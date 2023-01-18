@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from './selected.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { pReset} from '../character/priconneSlice';
@@ -12,14 +12,8 @@ const Selected = ({game}) => {
   const pCharSelected = useSelector(state => state.priconne.pCharSelected);
   const gCharSelected = useSelector(state => state.genshin.gCharSelected);
   const dispatch = useDispatch();
-  const visible = () => {
-    if(game === "genshin")
-      return '';
-    else{
-      return "";
-    }
-  }
-  const showSelected = (rank) => {
+
+  const showSelected = useCallback((rank) => {
     if(game === "priconne"){
       const pLen = pCharSelected.length;
       if(pLen === 0) return;
@@ -50,13 +44,16 @@ const Selected = ({game}) => {
         case 2:
           return <>
           {gLen >= 2 ? <SelectedChar game={game} char={gCharSelected[1]}/> : ""}
-          {gLen >= 3 ? <SelectedChar game={game} char={gCharSelected[2]}/> : ""}
           </>
+        case 3:
+          return <>{gLen >= 3 ? <SelectedChar game={game} char={gCharSelected[2]}/> : ""}</>
         default:
           break;
       }
     }
-  }
+  },[pCharSelected, gCharSelected, game]);
+
+  
 
   const reset = () => {
     dispatch(pReset());
@@ -68,17 +65,14 @@ const Selected = ({game}) => {
       <h2 className={styles.afterSelect}>Selected</h2>
       <Link to='/' className={styles.home}>Home</Link>
       <button onClick={reset}>Reset</button>
-
-
       <div className={styles.toServer}>
-        <div className={styles.score5}>
+        <div className={styles.score3}>
           {showSelected(1)}
         </div>
-        <div className={styles.score3}>
+        <div className={styles.score2}>
           {showSelected(2)}
         </div>
         <div className={styles.score1}>
-          {visible()}
           {showSelected(3)}
         </div>
       </div>

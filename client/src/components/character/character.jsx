@@ -52,11 +52,10 @@ const Character = ({char, game}) => {
       <img
         src={`image\\${game}_img\\${char}.png`}
         className={styles.item}
-
         onClick={handleSelect}
         alt={`${char}`}/>
         <img
-        style={{top: `${xy.y + 20}px`, left: `${xy.x + 5}px`}}
+        style={{top: `${xy.y+10}px`, left: `${xy.x + 5}px`}}
         className={styles.tooltipImg}
         src={`image\\${game}_tooltip\\${char}.png`}
         alt={`${char}`}
