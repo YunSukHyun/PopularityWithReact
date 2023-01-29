@@ -1,4 +1,3 @@
-import React, { useCallback } from 'react';
 import styles from './selected.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { pReset} from '../character/priconneSlice';
@@ -52,8 +51,6 @@ const Selected = ({game}) => {
       }
     }
   };
-
-  
 
   const reset = () => {
     dispatch(pReset());
