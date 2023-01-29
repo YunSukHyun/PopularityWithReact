@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Character from '../character/character';
 import styles from './characters.module.css';
-import * as gLib from '../genshin_library';
+import * as gLib from '../../library/genshin_library';
 import { useSelector } from 'react-redux';
 const GCharacters = ({game}) => {
   const male = gLib.gender[0];
