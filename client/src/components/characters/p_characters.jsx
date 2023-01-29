@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Character from '../character/character';
 import styles from './characters.module.css';
-import * as pLib from '../priconne_library';
+import * as pLib from '../../library/priconne_library';
 import { useSelector } from 'react-redux';
 const PCharacters = ({game}) => {
   const star1 = pLib.characters[0];

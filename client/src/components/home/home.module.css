@@ -7,3 +7,10 @@
 .priconne:hover, .genshin:hover {
   opacity: 0.75;
 }
+
+.sign {
+  border-radius: 50%;
+  background-color:coral;
+  color: white;
+  padding: 0.5em;
+}
