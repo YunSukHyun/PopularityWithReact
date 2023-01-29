@@ -7,7 +7,6 @@ import SelectedChar from '../selectedChar/selectedChar';
 import { Link } from 'react-router-dom';
 import Legend from '../legend/legend';
 
-
 const Selected = ({game}) => {
   const pCharSelected = useSelector(state => state.priconne.pCharSelected);
   const gCharSelected = useSelector(state => state.genshin.gCharSelected);
