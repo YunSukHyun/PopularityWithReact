@@ -13,7 +13,7 @@ const Selected = ({game}) => {
   const gCharSelected = useSelector(state => state.genshin.gCharSelected);
   const dispatch = useDispatch();
 
-  const showSelected = useCallback((rank) => {
+  const showSelected = (rank) => {
     if(game === "priconne"){
       const pLen = pCharSelected.length;
       if(pLen === 0) return;
@@ -51,7 +51,7 @@ const Selected = ({game}) => {
           break;
       }
     }
-  },[pCharSelected, gCharSelected, game]);
+  };
 
   
 

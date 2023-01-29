@@ -7,7 +7,7 @@ const db_config = {
     port:process.env.DB_PORT,
     user:'root',
     password:process.env.PW,
-    database:'priconne'
+    database:'popularity'
 };
 const conn = maria.createConnection(db_config);
 app.use(express.urlencoded({extended: true}));
@@ -15,12 +15,10 @@ app.use(express.static('public'))
 app.use(express.json())
 
 conn.connect();
-conn.query('SELECT * from ipcheck', (error, rows, fields) => {
-    if (error) throw error;
-        console.log('User info is: ', rows);
+conn.query('SELECT * from genshin', (error, rows, fields) => {
+        if (error) throw error;
         console.log(rows);
     }
-
 );
 
 app.get('/', (req, res)=>{
