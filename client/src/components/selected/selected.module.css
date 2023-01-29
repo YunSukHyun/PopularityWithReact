@@ -41,6 +41,7 @@
 
 .submit{
   margin-top: 2em;
+  margin-left: 1em;
   text-transform: capitalize;
   font-size: 2em;
   color: white;
@@ -50,5 +51,4 @@
 
 .submit:hover{
   background-color: rgb(203, 72, 20);
-
 }

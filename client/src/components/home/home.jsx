@@ -18,19 +18,19 @@ const Home = () => {
       setUser(user);
     })
   }, []);
+
   return (
     <>
       <div className={styles.img}>
         <Link to="/genshin">
           <img className={styles.genshin} src="image/link_img/genshin.png" alt="genshin"/>
         </Link>
+        {!user && <button className={styles.sign} onClick={handleLogin}>Login with Google</button>}
+        {user && <button className={styles.sign} onClick={handleLogout}>Logout</button>}
         <Link to="/priconne">
           <img className={styles.priconne} src="image/link_img/priconne.png" alt="priconne"/>
         </Link>
-      
       </div>
-     {!user && <button className={styles.sign} onClick={handleLogin}>Login with Google</button>}
-     {user && <button className={styles.sign} onClick={handleLogout}>Logout</button>}
      </>
   )
 };

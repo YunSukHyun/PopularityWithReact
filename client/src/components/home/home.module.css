@@ -1,7 +1,7 @@
 .priconne, .genshin{
   height:32vh;
   width: 18vw;
-  margin: 2em;
+  margin: 1em;
 }
 
 .priconne:hover, .genshin:hover {
@@ -9,8 +9,10 @@
 }
 
 .sign {
+  margin: 0.5em;
   border-radius: 50%;
   background-color:coral;
   color: white;
   padding: 0.5em;
+  font-size: 2em;
 }
